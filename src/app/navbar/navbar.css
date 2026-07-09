@@ -1,0 +1,52 @@
+/* This forces the header bar to contain its children horizontally */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #064e3b;
+  color: #ffffff;
+  height: 60px;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+ .logo-img {
+  height: 50px ;   
+  width: auto ;     
+  display: block ;
+  
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+
+
+.navbar-menu {
+  background:transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #10b981;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #043a29;
+}
