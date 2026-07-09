@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, signal, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -19,37 +19,21 @@ export class Home implements OnInit {
     'assets/images/slide4.jpg',
   ];
 
-  // Keeps track of the image currently displayed
-  currentImage = 0;
+  currentImage = signal(0);
+ 
 
-
-  constructor(private ngZone: NgZone) {}
-
-
-  // Changes the slideshow image
-  changeImage() {
-
-    if (this.currentImage < this.images.length - 1) {
-      this.currentImage++;
+  changeImage(){
+    if (this.currentImage() < this.images.length - 1) {
+      this.currentImage.set(this.currentImage() + 1);
     } else {
-      this.currentImage = 0;
+      this.currentImage.set(0);
     }
 
-    console.log(this.currentImage);
   }
 
-
-  // Runs when the component loads
   ngOnInit() {
-
-    this.ngZone.run(() => {
-
-      setInterval(() => {
-        this.changeImage();
-      }, 3000);
-
-    });
-
+    setInterval(() => {
+      this.changeImage();
+    }, 3000);
   }
-
 }
