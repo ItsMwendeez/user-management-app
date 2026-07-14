@@ -1,0 +1,67 @@
+<div class = "users-page">
+
+    <div class = "page-header">
+        <div class="header-text">
+        <h1>Users</h1>
+        <p> Manage registered users in the system.</p>
+        </div>
+        <button class="add-user-btn">
+            <lucide-icon [img]="UserPlus"></lucide-icon>
+           
+            Add User
+        </button>
+
+    </div>
+        <div class ="table-container">
+        <table>
+            <thead>
+                <tr> 
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>john_doe</td>
+                    <td>john.doe@example.com</td>
+                    <td>123-456-7890</td>
+                    <td>User</td>
+                    <td>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td>jane_smith</td>
+                    <td>jane.smith@example.com</td>
+                    <td>987-654-3210</td>
+                    <td>Admin</td>
+                    <td>
+                        <button class="btn btn-primary">Edit</button>   
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+
+    <div class="pagination">
+  <button class="page-btn">Previous</button>
+
+  <button class="page-number active">1</button>
+  <button class="page-number">2</button>
+  <button class="page-number">3</button>
+
+  <button class="page-btn">Next</button>
+    </div>
+  
+       
+</div>
+    

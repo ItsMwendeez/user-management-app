@@ -8,25 +8,44 @@
 
      <div class="form-group">
         <label for="FullName">Full Name</label>
-        <input 
+        
+        <div class="input-icon">
+            <lucide-icon [img]="User" class="icon"></lucide-icon>
+       
+       <input 
         type="text" 
         id="FullName"
         placeholder="Enter full Name">
+        
+        </div>
 
         <label for="Email">Email</label>
+
+        <div class="input-icon">
+            <lucide-icon [img]="Mail" class="icon"></lucide-icon>
+
         <input 
         type="email"
         id="Email"
         placeholder="Enter email">
         
+        </div>
 
         <label for="phone">Phone Number</label>
+
+        <div class="input-icon">
+            <lucide-icon [img]="Phone" class="icon"></lucide-icon>
         <input 
         type="tel"
         id="phone"
         placeholder="Enter phone number">
 
+        </div>
+
         <label for="role">Role</label>
+
+        <div class="input-icon">
+            <lucide-icon [img]="Shield" class="icon"></lucide-icon>
         <select id="role">
             <option value="">Select role</option>
             <option value="admin">Admin</option>
@@ -35,24 +54,14 @@
             <option value="manager">Manager</option>
         </select>
 
+        </div>
+
         <button class="register-button">
         Register User
         </button>
 
-
-
-
-
-
-
      </div>
    
-   
-   
-   
-   
-   
-    </div>
-    
-    
-</section>
+
+    </div>   
+ </section>
