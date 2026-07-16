@@ -1,17 +1,29 @@
-import { Component } from '@angular/core';
-import { LucideAngularModule, User, Mail, Phone, Shield } from 'lucide-angular';
+import { Component,OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-user',
   standalone: true,
-  imports: [LucideAngularModule],
+  imports: [MatIconModule,  FormsModule],
   templateUrl: './register-user.html',
   styleUrls: ['./register-user.css'],
 })
 export class RegisterUser {
-  readonly User = User;
-  readonly Mail = Mail;
-  readonly Phone = Phone
-  readonly Shield = Shield;
+  constructor(private router: Router){}
+ user = {
+    username: '',
+    email: '',
+    phone: '',
+    role: ''
+  };
+ 
+  ngOnInit() {
+  const selectedUser = history.state.user;
 
+  if (selectedUser) {
+    this.user = selectedUser;
+  }
+}
 }

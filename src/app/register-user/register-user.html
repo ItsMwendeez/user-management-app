@@ -7,53 +7,54 @@
         <p class="subtitle">Please fill in the form below to register a new user.</p>
 
      <div class="form-group">
-        <label for="FullName">Full Name</label>
+        <label for="username">Full Name</label>
         
         <div class="input-icon">
-            <lucide-icon [img]="User" class="icon"></lucide-icon>
-       
+           <mat-icon class="icon">person</mat-icon>
        <input 
-        type="text" 
-        id="FullName"
-        placeholder="Enter full Name">
+             type="text" 
+            id="username"
+            placeholder="Enter full Name"
+            [(ngModel)]="user.username">
         
         </div>
 
         <label for="Email">Email</label>
 
         <div class="input-icon">
-            <lucide-icon [img]="Mail" class="icon"></lucide-icon>
+            <mat-icon class="icon">mail</mat-icon>
 
         <input 
-        type="email"
-        id="Email"
-        placeholder="Enter email">
+            type="email"
+            id="Email"
+            placeholder="Enter email"
+            [(ngModel)]="user.email">
         
         </div>
 
         <label for="phone">Phone Number</label>
 
         <div class="input-icon">
-            <lucide-icon [img]="Phone" class="icon"></lucide-icon>
-        <input 
+            <mat-icon class="icon">phone</mat-icon>
+       <input 
         type="tel"
         id="phone"
-        placeholder="Enter phone number">
+        placeholder="Enter phone number"
+        [(ngModel)]="user.phone">
 
         </div>
 
         <label for="role">Role</label>
 
         <div class="input-icon">
-            <lucide-icon [img]="Shield" class="icon"></lucide-icon>
-        <select id="role">
-            <option value="">Select role</option>
-            <option value="admin">Admin</option>
-            <option value="user">User</option>
-            <option value="staff">Staff</option>
-            <option value="manager">Manager</option>
+           <mat-icon class="icon">admin_panel_settings</mat-icon>
+        <select id="role" [(ngModel)]="user.role">
+                 <option value="">Select role</option>
+                 <option value="admin">Admin</option>
+                 <option value="user">User</option>
+                 <option value="staff">Staff</option>
+                 <option value="manager">Manager</option>
         </select>
-
         </div>
 
         <button class="register-button">
