@@ -1,5 +1,9 @@
 <section class = "register-page">
 
+    <div class="register-layout">
+
+        <img src="assets/images/slide7.jpg" alt="image" class="side-image">
+
     <div class="register-form">
 
         <h1>Register user</h1>
@@ -7,6 +11,18 @@
         <p class="subtitle">Please fill in the form below to register a new user.</p>
 
      <div class="form-group">
+        <label for="id">id</label>
+        
+        <div class="input-icon">
+           <mat-icon class="icon">tag</mat-icon>
+       <input 
+             type="number" 
+            id="id"
+            placeholder="User ID"
+            [(ngModel)]="user.id"
+            >
+        
+        </div>
         <label for="username">Full Name</label>
         
         <div class="input-icon">
@@ -57,12 +73,12 @@
         </select>
         </div>
 
-        <button class="register-button">
-        Register User
+        <button class="register-button" (click)="saveUser()">
+        {{isEditing ? 'Update User' : 'Register User'}}
         </button>
 
      </div>
-   
+   </div>
 
     </div>   
  </section>

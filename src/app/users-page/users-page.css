@@ -18,7 +18,7 @@
     color: #666;
 }
 .add-user-btn {
-  background-color: #1c380c;
+  background-color: #42a807;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -40,7 +40,7 @@ table{
 }
 .table-container{
   
-  background: white;
+  background: rgb(195, 241, 198);
   border-radius: 12px;
   padding: 20px;
   margin-top: 20px;
